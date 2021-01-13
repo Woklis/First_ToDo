@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
 
-function App() {
+import { CurrentUserContext } from "./contexts/currentUser";
+import Router from "./routes/Router";
+import classes from "./App.module.css";
+
+const App = () => {
+  const [currentUserState] = useContext(CurrentUserContext);
+
+  console.log("state", currentUserState);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.App}>
+      <Router isLoggedIn={currentUserState.isLoggedIn} />
     </div>
   );
-}
+};
 
 export default App;
