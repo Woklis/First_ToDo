@@ -39,7 +39,7 @@ const MenuWrapper = ({
         {items.map((item) => (
           <NavLink
             exact
-            to={`/${item}`}
+            to={`/${title}/${item}`}
             className={classes.child}
             activeClassName={classes.active}
             onClick={() => clickHandler(item)}

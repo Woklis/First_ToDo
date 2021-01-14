@@ -1,0 +1,88 @@
+.table {
+    margin-top: 20px;
+}
+
+.table_head {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: #3a4153;
+    font-size: 0.9rem;
+    display: flex;
+}
+
+.table_head__entry {
+    padding-left: 52px;
+    width: 50%;
+}
+
+.table_head__status {
+    width: 20%;
+}
+
+.table_head__created {
+    flex-grow: 1;
+}
+
+.table_row {
+    font-size: 15px;
+    border-radius: 5px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    background-color: #1b202d;
+    font-weight: 400;
+    color: #788194;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.table_row__entry {
+    display: flex;
+    align-items: center;
+}
+
+.table_row__entry input {
+    display: none;
+}
+
+.table_row__entry label {
+    display: inline-block;
+}
+
+.table_row__entry label::before {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    display: block;
+    border: 1px solid #444a5f;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.table_row__entry input:checked+label::before {
+    border-color: #5628ee;
+    background-color: #5628ee;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+
+.table_row__entry {
+    width: 50%;
+}
+
+.table_row__status {
+    width: 20%;
+}
+
+.table_row__created {
+    flex-grow: 1;
+}
+
+.table_row__options {
+    cursor: pointer;
+    margin-right: 20px;
+}

@@ -13,7 +13,7 @@ const Router = ({ isLoggedIn }) => (
           : console.log("isLoggedIn", isLoggedIn)}
         {isLoggedIn ? <Home /> : <Redirect to="/login" />}
       </Route>
-      <Route path="/messages">
+      <Route path="/content">
         <Home />
       </Route>
       <Route path="/login">
