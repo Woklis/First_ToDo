@@ -6,6 +6,7 @@ const InputField = ({ classes, icon, type, email, placeholder, setter }) => {
     <div className={classes}>
       <i className={icon} aria-hidden="true"></i>
       <input
+        autoComplete={"false"}
         type={type}
         value={email}
         placeholder={placeholder}
