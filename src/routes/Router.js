@@ -8,9 +8,6 @@ const Router = ({ isLoggedIn }) => (
   <Fragment>
     <Switch>
       <Route path="/" exact>
-        {isLoggedIn
-          ? console.log("isLoggedIn", isLoggedIn)
-          : console.log("isLoggedIn", isLoggedIn)}
         {isLoggedIn ? <Home /> : <Redirect to="/login" />}
       </Route>
       <Route path="/content">

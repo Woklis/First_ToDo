@@ -3,6 +3,7 @@ import { useLocation, useHistory } from "react-router-dom";
 
 import { CurrentUserContext } from "../../contexts/currentUser";
 import useFetch from "../../hooks/useFetch";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import LoginView from "./LoginView";
 
 const Login = (props) => {
@@ -23,6 +24,7 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [{ response, error }, doFetch] = useFetch(url);
+  const [token, setToken] = useLocalStorage("token");
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -39,6 +41,7 @@ const Login = (props) => {
     if (!response) return;
     setData({ status: "success", errors: null });
     setCurrentUser((state) => ({ ...state, isLoggedIn: true }));
+    setToken(response.data.user.token);
 
     let timer = setTimeout(() => {
       history.push("/");
