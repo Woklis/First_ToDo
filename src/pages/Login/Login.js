@@ -7,7 +7,7 @@ import useLocalStorage from "../../hooks/useLocalStorage";
 import LoginView from "./LoginView";
 
 const Login = (props) => {
-  const [, setCurrentUser] = useContext(CurrentUserContext);
+  const [{ isLoggedIn }, setCurrentUser] = useContext(CurrentUserContext);
 
   const location = useLocation().pathname.slice(1); // del /
   const history = useHistory();
@@ -36,6 +36,12 @@ const Login = (props) => {
 
     doFetch({ method: "POST", data: { user } });
   };
+
+  // TODO: add loading display while authorization request is in progress
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    history.push("/");
+  }, [isLoggedIn]);
 
   useEffect(() => {
     if (!response) return;

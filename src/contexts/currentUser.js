@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 
 export const CurrentUserContext = createContext([{}, () => {}]);
 
@@ -8,6 +8,9 @@ export const CurrentUserProvider = ({ children }) => {
     isLoading: false,
     isLoggedIn: false,
   });
+
+  useEffect(() => {}, [state]);
+
   return (
     <CurrentUserContext.Provider value={[state, setState]}>
       {children}

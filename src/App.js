@@ -11,7 +11,10 @@ const App = () => {
 
   return (
     <div className={classes.App}>
-      <Router isLoggedIn={currentUserState.isLoggedIn} />
+      <Router
+        isLoggedIn={currentUserState.isLoggedIn}
+        isLoading={currentUserState.isLoading}
+      />
     </div>
   );
 };
