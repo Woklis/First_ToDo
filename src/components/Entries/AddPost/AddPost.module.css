@@ -1,0 +1,82 @@
+.AddPostWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);;
+}
+
+.AddPost {
+    padding: 40px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    width: 400px;
+    height: 400px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.form {
+    width: 100%;
+}
+.input {
+    font-weight: 500;
+    color: rgb(56, 73, 88);
+    font-size: 1.1rem;
+    border: none;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    display: block;
+    width: 100%;
+}
+
+.input:focus {
+    box-shadow: 0 0 5px 2px rgba(108, 142, 197, 0.637);
+}
+
+.textarea {
+    font-weight: 500;
+    color: rgb(56, 73, 88);
+    font-size: 1.1rem;
+    border: none;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    display: block;
+    width: 100%;
+}
+
+.addWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.add {
+    background-color: #5628EE;
+    border: none;
+    outline: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.add:active {
+    box-shadow: 0 0 5px 3px #412697b2
+} 

@@ -24,7 +24,7 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [{ response, error }, doFetch] = useFetch(url);
-  const [token, setToken] = useLocalStorage("token");
+  const [, setToken] = useLocalStorage("token");
 
   const onSubmit = (event) => {
     event.preventDefault();
